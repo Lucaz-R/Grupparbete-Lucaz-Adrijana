@@ -1,10 +1,10 @@
 .hero {
-  width: 100vw;       
+  width: 100vw;
   height: 387px;
   position: relative;
   left: 50%;
   right: 50%;
-  margin-left: -50vw; 
+  margin-left: -50vw;
   margin-right: -50vw;
   overflow: hidden;
 
@@ -26,34 +26,78 @@
   padding: 0 40px;
   font-family: "Playfair Display", serif;
   font-size: 25px;
-}
 
-.stat-item {
-  text-align: left;
-}
+  .stat-item {
+    text-align: left;
+  }
 
-.stat-value {
-  font-weight: 400;
-}
+  .stat-value {
+    font-weight: 400;
+  }
 
-.stat-label {
-  margin-top: 4px;
-  font-weight: 400;
+  .stat-label {
+    margin-top: 4px;
+    font-weight: 400;
+  }
 }
 
 .Our-Story {
   max-width: 1440px;
-  margin: 80px auto 0 auto;   
-  padding: 0 40px;            
+  margin: 80px auto 150px auto;
+  padding: 0 40px;
 
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 1.6;
+
+  h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 
-.Our-Story h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 700; 
-  font-size: 30px;
-  margin-bottom: 20px;
+.team-section {
+  max-width: 1440px;
+  margin: 40px auto;
+  padding: 0 40px;
+
+  .team-title {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+
+  .team-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 175px);
+    justify-content: space-between;
+    gap: 35px !important;
+  }
+
+  .team-member {
+    width: 175px;
+    margin: 0 !important;
+
+    img {
+      width: 175px !important;
+      height: 290px !important;
+      object-fit: cover;
+      display: block;
+    }
+
+    .team-name {
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      margin-top: 12px;
+      margin-bottom: 4px;
+    }
+
+    .team-role {
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+    }
+  }
 }
