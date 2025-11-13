@@ -6,9 +6,13 @@
 
 $grey: #e2e2e4;
 
+html, body {
+  margin-top: 0;
+}
+
 .contacthero {
   width: 100vw;       
-  height: 387px;     /*Figma*/ 
+  height: 387px;    
   position: relative;
   left: 50%;
   right: 50%;
@@ -36,8 +40,8 @@ $grey: #e2e2e4;
 
   .contact-header {
   width: 1226px;
-  height: 30px;
-  margin-top: 60px;     
+  height: 60px;
+  margin-top: 30px;     
   margin-left: 107px;  
   display: flex;
   align-items: center;
@@ -184,103 +188,26 @@ $grey: #e2e2e4;
   margin-bottom: 80px;
   text-align: right;}
 
-  .footer {
-  width: 100vw;          
-  height: 400px;              
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  justify-content:flex-start;
-  background-color: $grey;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw; 
-  margin-right: -50vw;
-  overflow: hidden;
-   }
-
-   .footer-content {
-  width: 100%;
-  max-width: 1226px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px 107px;
+  #scrollToTopBtn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: $primary-color; // možeš promeniti
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; // skrivamo dok ne skroluješ
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  .footer-title {
-    font-family: $secondary-font;
-    font-size: 40px;
-    color: black;
-    margin-bottom: 15px;
-  }
-   .footer-image {
-    width: 500px;
-    height: 250px;
-    margin-bottom: 20px;
-  }
+#scrollToTopBtn:hover {
+  background-color: darken($primary-color, 10%);
 }
 
-
-.footer-right {
-  display: flex;
-  height: 320px;
-  flex-direction:row-reverse;
-  align-items: flex-start; 
-  justify-content: flex-end;
-  padding-right: 80px;  
-  gap: 230px;            
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px;
-
-    .menu-title {
-    font-family: $secondary-font;
-    font-weight: bold;   
-    font-size: 22px;     
-    margin-bottom: 18px; 
-  }
-
-    li {
-      margin-bottom: 16px;
-
-      a {
-        font-family: $secondary-font;
-        font-size: 20px; 
-        text-decoration: none;
-        color: black;
-        }
-      }
-    }
-  }
-
-  .footer-social {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 35px;
-
-    p {
-      font-family: $secondary-font;
-      font-size: 20px;
-      line-height: 1.2; 
-     }
-
-    .social-icons {
-      display: flex;
-  
-      img {
-        width: 40px;
-        height: 40px;
-       }
-    }
-  }
+ 

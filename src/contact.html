@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -10,17 +11,15 @@
     <link rel="stylesheet" href="./assets/css/contact.scss" />
   </head>
   <body>
-      <!--Header-->
       <header id="header" class="header">
         <h1>Google News</h1>
-        <!--Menu-->
         <nav id="menu" class="menu">
           <ul>
             <li>
               <a href="/Offerings">What we do</a>
             </li>
             <li>
-              <a href="/About-us">Who we are</a>
+             <a href="who-we-are.html">Who we are</a>
             </li>
             <li>
               <a href="/Customers">Customers</a>
@@ -48,7 +47,7 @@
       </header>
 
       <section class="contacthero">
-  <img src="../img/comp.png" alt="Contact page banner image" />
+  <img src="../img/comp.png" alt="Company image" />
 </section>
 
 <section class="contact-section">
@@ -76,9 +75,9 @@
     </div>
 
     <div class="social-icons">
-      <a href="#"><img src="../img/tumblr.png" alt="Tumblr" /></a>
-      <a href="#"><img src="../img/linkedin.png" alt="LinkedIn" /></a>
-      <a href="#"><img src="../img/fb.png" alt="Facebook" /></a>
+      <a href="#"><img src="../img/tumblr.png" alt="Tumblr social icon" /></a>
+      <a href="#"><img src="../img/linkedin.png" alt="LinkedIn social icon" /></a>
+      <a href="#"><img src="../img/fb.png" alt="Facebook social icon" /></a>
     </div>
   </div> 
 
@@ -99,73 +98,73 @@
 
       <div class="team-grid">
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-1.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-1.jpg" alt="Melissa Humble - CEO" />
           <h3 class="team-name">Melissa Humble</h3>
           <p class="team-role">CEO</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-2.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-2.jpg" alt="David Cole - Editor-in-Chief" />
           <h3 class="team-name">David Cole</h3>
           <p class="team-role">Editor-in-Chief</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-3.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-3.jpg" alt="Sofia Carter - UX Designer" />
           <h3 class="team-name">Sofia Carter</h3>
           <p class="team-role">UX Designer</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-4.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-4.jpg" alt="Erik Johansson - Marketing Director" />
           <h3 class="team-name">Erik Johansson</h3>
           <p class="team-role">Marketing Director</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-5.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-5.jpg" alt="AVA Thompson - Product Manager" />
           <h3 class="team-name">Ava Thompson</h3>
           <p class="team-role">Product Manager</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-6.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-6.jpg" alt="Liam Becker - Senior Journalist" />
           <h3 class="team-name">Liam Becker</h3>
           <p class="team-role">Senior Journalist</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-7.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-7.jpg" alt="Marie Nilsson - HR & Office Manager" />
           <h3 class="team-name">Marie Nilsson</h3>
           <p class="team-role">HR & Office Manager</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-8.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-8.jpg" alt="Omar Rahman - Web Developer" />
           <h3 class="team-name">Omar Rahman</h3>
           <p class="team-role">Web Developer</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-9.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-9.jpg" alt="Nora Chen - Data Journalist" />
           <h3 class="team-name">Nora Chen</h3>
           <p class="team-role">Data Journalist</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-10.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-10.jpg" alt="Johan Lindgren - QA & Technical Editor" />
           <h3 class="team-name">Johan Lindgren</h3>
           <p class="team-role">QA & Technical Editor</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-11.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-11.jpg" alt="Isabella Moreau - UX Researcher" />
           <h3 class="team-name">Isabella Moreau</h3>
           <p class="team-role">UX Researcher</p>
         </div>
 
         <div class="team-member">
-          <img src="./Images/Meet the team portraits/portrait-12.jpg" alt="" />
+          <img src="./Images/Meet the team portraits/portrait-12.jpg" alt="Felix Holm - Social Media Manager" />
           <h3 class="team-name">Felix Holm</h3>
           <p class="team-role">Social Media Manager</p>
         </div>
@@ -192,39 +191,26 @@
     </div>
   </div>
 </section>
+<button id="scrollToTopBtn" title="Go to top">↑</button>
 
-<footer class="footer">
-  <div class="footer-content">
+<script>
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-    <div class="footer-left">
-      <h1 class="footer-title">Google News</h1>
-      <img src="../img/google.png" alt="Google image" class="footer-image" />
-    </div>
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  };
 
-    <div class="footer-right">
-      <ul>
-          <li class="menu-title">Menu:</li>
-        <li><a href="#">What we do</a></li>
-        <li><a href="#">Who we are</a></li>
-        <li><a href="#">Customers</a></li>
-        <li><a href="#">Career</a></li>
-        <li><a href="#">IR</a></li>
-        <li><a href="#">Latest</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
-      <div class="footer-social">
-        <p>Find us on<br> social media:</p>
-        <div class="social-icons">
-          <a href="#"><img src="../img/tumblr.png" alt="Tumblr" /></a>
-          <a href="#"><img src="../img/linkedin.png" alt="LinkedIn" /></a>
-          <a href="#"><img src="../img/fb.png" alt="Facebook" /></a>
-        </div>
-      </div>
-    </div>
-
-  </div> 
-</footer>
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 
  
 
