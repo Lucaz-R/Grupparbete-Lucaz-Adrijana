@@ -121,7 +121,7 @@
 
     .footer__left {
       display: flex;
-      gap: 200px; // spacing between columns
+      gap: 200px; 
     }
 
     .footer__column {
@@ -144,11 +144,11 @@
           margin-bottom: 4px;
 
           a {
-            color: inherit;          // same color as surrounding text
+            color: inherit;          
             text-decoration: none;
 
             &:hover {
-              text-decoration: underline; // nice hover effect
+              text-decoration: underline; 
             }
           }
         }
@@ -165,7 +165,7 @@
       font-size: 14px;
       white-space: nowrap;
       padding-top: 4px;
-      margin-left: auto; // pushes to the right
+      margin-left: auto; 
     }
   }
 }

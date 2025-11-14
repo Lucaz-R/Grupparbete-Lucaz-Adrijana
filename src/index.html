@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="./assets/css/reset.css" type="text/css" />
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/who-we-are-style.scss" />
   </head>
   <body>
     <section role="main" id="wrapper">
@@ -39,7 +40,7 @@
               <a href="/Latest" class="current">Latest</a>
             </li>
             <li>
-              <a href="/Contact">Contact</a>
+              <a href="contact.html">Contact</a>
             </li>
             <li class="search">
               <input
@@ -59,26 +60,53 @@
 
       <section id="content"></section>
 
-      <footer>
-        <!--Wather widget-->
-        <script>
-          !(function (d, s, id) {
-            var js,
-              fjs = d.getElementsByTagName(s)[0];
-            if (!d.getElementById(id)) {
-              js = d.createElement(s);
-              js.id = id;
-              js.src = "https://weatherwidget.io/js/widget.min.js";
-              fjs.parentNode.insertBefore(js, fjs);
-            }
-          })(document, "script", "weatherwidget-io-js");
-        </script>
-        <!--JS Scripts-->
-        <script type="text/javascript" src="./assets/js/menu.js"></script>
-        <!--Mobile menu JS-->
-        <script type="text/javascript" src="./assets/js/request.js"></script>
-        <!--JSON API request JS-->
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="footer__left">
+            <div class="footer__column">
+              <h3>About us</h3>
+              <ul>
+                <li><a href="contact.html">What we do</a></li>
+                <li><a href="who-we-are.html">Who we are</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__column">
+              <h3>About you</h3>
+              <ul>
+                <li>Customers</li>
+                <li>Latest</li>
+              </ul>
+            </div>
+
+            <div class="footer__column">
+              <h3>Address</h3>
+              <p>Google street 2,<br />526 42 Googleville</p>
+            </div>
+          </div>
+
+          <div class="footer__copyright">Copyright 2022 Google News</div>
+        </div>
       </footer>
+
+      <!--Wather widget-->
+      <script>
+        !(function (d, s, id) {
+          var js,
+            fjs = d.getElementsByTagName(s)[0];
+          if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://weatherwidget.io/js/widget.min.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          }
+        })(document, "script", "weatherwidget-io-js");
+      </script>
+      <!--JS Scripts-->
+      <script type="text/javascript" src="./assets/js/menu.js"></script>
+      <!--Mobile menu JS-->
+      <script type="text/javascript" src="./assets/js/request.js"></script>
+      <!--JSON API request JS-->
     </section>
   </body>
 </html>
