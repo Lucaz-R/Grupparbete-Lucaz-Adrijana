@@ -3,8 +3,9 @@
 @import "./sass/fonts";
 @import "./sass/header";
 @import "./sass/articles";
+@import "./sass/footer";
+@import "./sass/team";
 
-$grey: #e2e2e4;
 
 html, body {
   margin-top: 0;
@@ -29,78 +30,99 @@ html, body {
 }
 
 .contact-section {
-  width: 100vw;         
-  max-width: 1440px;    
-  height: 582px;              
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
-  justify-content:flex-start;
-   }
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .contact-header {
-  width: 1226px;
-  height: 60px;
-  margin-top: 30px;     
-  margin-left: 107px;  
+
+.contact-header {
+  width: 90%;
+  max-width: 1226px;
+  margin: 60px auto 40px auto;
   display: flex;
   align-items: center;
 
   h2 {
     font-family: $primary-font;
     font-weight: normal;
-    @include size(20, 25);
+    font-size: 20px;
     color: black;
   }
 }
 
- .contact-info {
-  width: 1226px;
-  height: 178px;
-  margin-left: 107px;  
+
+.contact-info {
+  width: 90%;
+  max-width: 1226px;   
+  height: auto;         
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;      
+  gap: 20px;
+  transition: all 0.3s ease; 
+}
+
+.info-item {
+  font-family: $secondary-font;
+  color: black;
+  flex: 1 1 250px;     
+  min-width: 200px;
+
+  h3 {
+    font-family: $primary-font;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   align-items: center;
- }
-  
- .info-item {
-    font-family: $secondary-font;
-    color: black;
+  justify-content: flex-start;
+  margin-top: 40px;
 
-    h3 {
-      font-family: $primary-font;
-      font-size: 16px;
-      margin-bottom: 40px;
-    }
-
-    p {
-      font-size: 14px;
-      margin: 0;
-      
-    }
+  img {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease; 
   }
-   .social-icons {
-    display: flex;
-    gap: 15px;
-    
+}
 
-    img {
-      width: 24px;
-      height: 24px;
-      margin-top: 70px;
-    }
-  }
 
-  .contact-map {
-  width: 1226px;
+.contact-map {
+  width: 90%;
+  max-width: 1226px;    
   height: 287px;
-  margin-bottom: 2px;   
-  margin-left: 107px;
+  margin: 40px auto 2px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 
-   iframe {
-    width: 100%;
+  iframe {
+    width: 100%;         
     height: 100%;
     border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
   }
 }
 
@@ -118,7 +140,7 @@ html, body {
 
   .team-grid {
     display: grid !important;
-    grid-template-columns: repeat(6, 175px);
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
     justify-content: space-between;
     gap: 35px !important;
   }
@@ -148,59 +170,89 @@ html, body {
   }
 }
 
-.about-section {
-  width: 100vw;         
-  max-width: 1440px;    
-  height: 192px;              
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; 
-  justify-content:flex-start;
-   }
+.footer {
+  width: 100%;
+  padding: 40px 0;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  background: white;
+  font-family: "Open Sans", sans-serif;
+  border-top: 1px solid #e5e5e5;
 
-    .about-info {
-  width: 1226px;
-  height: 178px;
-  margin-left: 107px;  
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;
- }
-  
- .ainfo-item {
-    font-family: $secondary-font;
-    color: black;
+  .footer__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
 
+    display: flex;
+    align-items: flex-start;
 
-    h3 {
-      font-family: $primary-font;
-      font-size: 16px;
-      margin-bottom: 40px;
+    .footer__left {
+      display: flex;
+      gap: 200px; 
     }
 
-    p {
+    .footer__column {
+      flex: 0 0 auto;
+      text-align: left;
+
+      h3 {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        margin-bottom: 14px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-size: 14px;
+          margin-bottom: 4px;
+
+          a {
+            color: inherit;          
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline; 
+            }
+          }
+        }
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+
+    .footer__copyright {
       font-size: 14px;
-      margin: 0;
+      white-space: nowrap;
+      padding-top: 4px;
+      margin-left: auto; 
     }
-   }
+  }
+}
 
-  .ainfo-item:last-child p {
-  margin-bottom: 80px;
-  text-align: right;}
+
 
   #scrollToTopBtn {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
+  bottom: 30px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
   border: none;
   border-radius: 50%;
-  background-color: $primary-color; // možeš promeniti
+  background-color: $primary-color; 
   color: white;
   font-size: 24px;
   cursor: pointer;
-  display: none; // skrivamo dok ne skroluješ
+  display: none; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   z-index: 999;
@@ -210,4 +262,171 @@ html, body {
   background-color: darken($primary-color, 10%);
 }
 
- 
+
+@media (max-width: 1190px) {
+  .contact-section {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-header {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+
+    h2 {
+      font-size: 22px;
+      text-align: left;
+      margin-left: 10px;
+    }
+  }
+
+  .contact-info {
+    display: flex;                   
+    flex-wrap: wrap;                
+    justify-content: flex-start;  
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 25px;                       
+  }
+
+  .info-item {
+    flex: 1 1 45%;                   
+    max-width: 600px;
+     min-width: 320px;             
+  max-width: 100%;             
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+
+  .social-icons {
+    grid-column: 2 / 3; 
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+     padding-right: 150px;   
+  box-sizing: border-box; 
+
+    
+
+    img {
+      width: 26px;
+      height: 26px;
+    }
+  }
+  .contact-map {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 1; 
+    overflow: hidden;
+
+    iframe {
+      display: block;
+      width: 88%;
+      height: 100%;
+      border: none;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 40px; 
+    }
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .contacthero {
+    width: 100%;      
+    height: 220px;     
+  }
+
+  .contacthero img {
+    object-fit: cover; 
+    object-position: center; 
+  }
+
+
+
+ .contact-info {
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start;
+    align-items: flex-start; 
+    width: 100%;
+     margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+    gap: 4px;               
+    
+  }
+
+  .info-item {
+    width: 100%;
+     height: auto !important;
+       margin: 0 !important;
+    padding: 0 !important;
+    
+    h3 {
+      font-size: 16px;
+      margin-bottom: 2px;  
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 4px;  
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;      
+    gap: 10px;
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .contact-map {
+    width: 100%;
+    height: 200px;
+    margin-top: 25px;
+    padding-right: 25px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    iframe {
+      width: 90%;           
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+
+
