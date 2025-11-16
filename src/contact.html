@@ -68,7 +68,7 @@
         <div class="info-item">
           <h3>General inquiries</h3>
           <p>info@googlenews.com</p>
-          <p>+846 795 85 96</p>
+          <p>+846 795 85 36</p>
         </div>
 
         <div class="info-item">
@@ -220,47 +220,60 @@
       </div>
     </section>
 
-    <section class="about-section">
-      <div class="about-info">
-        <div class="ainfo-item">
-          <h3>About us</h3>
-          <p>What we do <br />Who we are</p>
+     <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__column">
+            <h3>About us</h3>
+            <ul>
+              <li><a href="contact.html">What we do</a></li>
+              <li>Who we are</li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3>About you</h3>
+            <ul>
+              <li>Customers</li>
+              <li>Latest</li>
+            </ul>
+          </div>
+
+          <div class="footer__column">
+            <h3>Address</h3>
+            <p>Google street 2,<br />526 42 Googleville</p>
+          </div>
         </div>
-        <div class="ainfo-item">
-          <h3>About you</h3>
-          <p>Customers <br />Latest</p>
-        </div>
-        <div class="ainfo-item">
-          <h3>Adress</h3>
-          <p>Google street 2,<br />526 42 Googleville</p>
-        </div>
-        <div class="ainfo-item">
-          <p>Copyright 2022 Google News</p>
-        </div>
+
+        <div class="footer__copyright">Copyright 2022 Google News</div>
       </div>
-    </section>
+    </footer>
     <button id="scrollToTopBtn" title="Go to top">↑</button>
 
-    <script>
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    <script src="./assets/js/menu.js"></script>
+    <script type="text/javascript" src="./assets/js/request.js"></script>
 
-      window.onscroll = function () {
-        if (
-          document.body.scrollTop > 200 ||
-          document.documentElement.scrollTop > 200
-        ) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      };
+  <script>
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  const footer = document.querySelector(".footer");
 
-      scrollToTopBtn.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-    </script>
+  window.addEventListener("scroll", () => {
+    const footerRect = footer.getBoundingClientRect();
+
+   
+   if (footerRect.bottom - 100 <= window.innerHeight) {
+  scrollToTopBtn.style.display = "block";
+} else {
+  scrollToTopBtn.style.display = "none";
+}
+  });
+
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
   </body>
 </html>
