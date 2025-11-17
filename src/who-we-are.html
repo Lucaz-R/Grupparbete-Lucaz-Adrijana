@@ -232,7 +232,32 @@
         <div class="footer__copyright">Copyright 2022 Google News</div>
       </div>
     </footer>
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <script src="./assets/js/menu.js"></script>
+    <script type="text/javascript" src="./assets/js/request.js"></script>
 
     <script src="./assets/js/who-we-are.js"></script>
+    <script>
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      const footer = document.querySelector(".footer");
+
+      window.addEventListener("scroll", () => {
+        const footerRect = footer.getBoundingClientRect();
+
+        if (footerRect.bottom - 100 <= window.innerHeight) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
