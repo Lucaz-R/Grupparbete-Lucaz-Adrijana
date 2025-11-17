@@ -88,22 +88,27 @@
   .team-title {
     font: 700 28px "Playfair Display", serif;
     margin-bottom: 30px;
+    text-align: left;
   }
 
+  /* Desktop: 6 fixed columns — but safe with minmax */
   .team-grid {
     display: grid !important;
-    grid-template-columns: repeat(6, 175px);
-    justify-content: space-between;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 35px !important;
+    justify-items: center;   /* keeps items centered instead of clipping */
   }
 
   .team-member {
-    width: 175px;
-    margin: 0 !important;
+    width: 175px;            /* max width */
+    max-width: 100%;         /* prevents overflow */
+    text-align: left;
 
     img {
-      width: 175px !important;
-      height: 290px !important;
+      width: 100%;           /* responsive */
+      height: auto;          /* proportional */
+      max-width: 175px;      /* keeps the same look on wide screens */
+      aspect-ratio: 175 / 290;
       object-fit: cover;
     }
 
@@ -117,48 +122,60 @@
     }
   }
 
+  /* ---------- 1200px → 4 columns ---------- */
+  @media (max-width: 1200px) {
+    .team-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 32px;
+    }
+  }
+
+  /* ---------- 900px → 3 columns ---------- */
   @media (max-width: 900px) {
     padding: 0 30px;
 
     .team-grid {
-      grid-template-columns: repeat(3, 1fr);
-      justify-items: center;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 28px;
     }
   }
 
+  /* ---------- 768px → 2 columns ---------- */
   @media (max-width: 768px) {
     padding: 0 24px;
 
     .team-grid {
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
     }
 
-    .team-member { margin: 0 auto !important; }
+    .team-member {
+      margin: 0 auto !important;
+      text-align: center;
+    }
   }
 
+  /* ---------- 600px → 2 columns with soft resizing ---------- */
   @media (max-width: 600px) {
     padding: 0 20px;
 
     .team-grid {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
     }
 
     .team-member {
-      width: 100% !important;
-      max-width: 240px;
-      text-align: center;
+      width: 100%;
+      max-width: 220px;
 
       img {
-        width: 100% !important;
-        height: auto !important;
+        width: 100%;
+        height: auto;
       }
     }
   }
 
+  /* ---------- 480px → 1 column ---------- */
   @media (max-width: 480px) {
     padding: 0 16px;
 
@@ -172,6 +189,10 @@
     .team-role { font-size: 13px; }
   }
 }
+
+
+
+
 
 .footer {
   width: 100%;
