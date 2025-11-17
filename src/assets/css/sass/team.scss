@@ -1,0 +1,42 @@
+@media (max-width: 480px) {
+  .team-section {
+    padding: 0 10px;
+    margin: 20px auto;
+     
+
+    .team-title {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr !important;
+      justify-items: center !important;
+      gap: 20px !important;
+}
+    
+
+    .team-member {
+      width: 100%;
+      max-width: 250px;
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+      }
+
+      .team-name {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      .team-role {
+        font-size: 13px;
+        color: #333;
+      }
+    }
+  }
+}
