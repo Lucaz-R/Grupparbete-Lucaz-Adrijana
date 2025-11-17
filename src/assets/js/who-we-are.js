@@ -38,3 +38,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(document.querySelector(".stats"));
 });
+
+const statItems = document.querySelectorAll('.stat-item');
+
+statItems.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    item.style.transform = 'scale(1.07)';
+    item.style.transition = 'transform 0.25s ease';
+  });
+
+  item.addEventListener('mouseleave', () => {
+    item.style.transform = 'scale(1)';
+  });
+});
+
